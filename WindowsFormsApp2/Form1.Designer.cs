@@ -28,178 +28,217 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.打开串口 = new System.Windows.Forms.Button();
-            this.串口号 = new System.Windows.Forms.Label();
-            this.串口配置 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.加载文件 = new System.Windows.Forms.Button();
-            this.波特率 = new System.Windows.Forms.Label();
-            this.升级操作 = new System.Windows.Forms.Label();
-            this.起始地址 = new System.Windows.Forms.Label();
-            this.文件长度 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.固件升级 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.components = new System.ComponentModel.Container();
+            this.open_btn = new System.Windows.Forms.Button();
+            this.serial_port_lbl = new System.Windows.Forms.Label();
+            this.serial_port_cbb = new System.Windows.Forms.ComboBox();
+            this.baudrate_cbb = new System.Windows.Forms.ComboBox();
+            this.filePathBtn = new System.Windows.Forms.Button();
+            this.baudrate_lbl = new System.Windows.Forms.Label();
+            this.addressOffsetLbl = new System.Windows.Forms.Label();
+            this.fileSizeLbl = new System.Windows.Forms.Label();
+            this.addressOffsetBox = new System.Windows.Forms.TextBox();
+            this.fileSizeBox = new System.Windows.Forms.TextBox();
+            this.updateBtn = new System.Windows.Forms.Button();
+            this.filePathBox = new System.Windows.Forms.TextBox();
+            this.LogBox = new System.Windows.Forms.RichTextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.refreshCom_Btn = new System.Windows.Forms.Button();
+            this.baudrateLbl = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
+            this.serialPort3 = new System.IO.Ports.SerialPort(this.components);
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // 打开串口
+            // open_btn
             // 
-            this.打开串口.Location = new System.Drawing.Point(479, 71);
-            this.打开串口.Name = "打开串口";
-            this.打开串口.Size = new System.Drawing.Size(75, 23);
-            this.打开串口.TabIndex = 0;
-            this.打开串口.Text = "打开串口";
-            this.打开串口.UseVisualStyleBackColor = true;
-            this.打开串口.Click += new System.EventHandler(this.button1_Click);
+            this.open_btn.Location = new System.Drawing.Point(393, 47);
+            this.open_btn.Name = "open_btn";
+            this.open_btn.Size = new System.Drawing.Size(75, 23);
+            this.open_btn.TabIndex = 0;
+            this.open_btn.Text = "打开串口";
+            this.open_btn.UseVisualStyleBackColor = true;
+            this.open_btn.Click += new System.EventHandler(this.open_btn_Click);
             // 
-            // 串口号
+            // serial_port_lbl
             // 
-            this.串口号.AutoSize = true;
-            this.串口号.Location = new System.Drawing.Point(46, 74);
-            this.串口号.Name = "串口号";
-            this.串口号.Size = new System.Drawing.Size(41, 12);
-            this.串口号.TabIndex = 1;
-            this.串口号.Text = "串口号";
+            this.serial_port_lbl.AutoSize = true;
+            this.serial_port_lbl.Location = new System.Drawing.Point(20, 70);
+            this.serial_port_lbl.Name = "serial_port_lbl";
+            this.serial_port_lbl.Size = new System.Drawing.Size(41, 12);
+            this.serial_port_lbl.TabIndex = 1;
+            this.serial_port_lbl.Text = "串口号";
             // 
-            // 串口配置
+            // serial_port_cbb
             // 
-            this.串口配置.AutoSize = true;
-            this.串口配置.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.串口配置.Location = new System.Drawing.Point(34, 26);
-            this.串口配置.Name = "串口配置";
-            this.串口配置.Size = new System.Drawing.Size(67, 14);
-            this.串口配置.TabIndex = 2;
-            this.串口配置.Text = "串口配置";
+            this.serial_port_cbb.FormattingEnabled = true;
+            this.serial_port_cbb.Location = new System.Drawing.Point(67, 67);
+            this.serial_port_cbb.Name = "serial_port_cbb";
+            this.serial_port_cbb.Size = new System.Drawing.Size(121, 20);
+            this.serial_port_cbb.Sorted = true;
+            this.serial_port_cbb.TabIndex = 3;
             // 
-            // comboBox1
+            // baudrate_cbb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(93, 71);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox1.TabIndex = 3;
+            this.baudrate_cbb.FormattingEnabled = true;
+            this.baudrate_cbb.Location = new System.Drawing.Point(245, 50);
+            this.baudrate_cbb.Name = "baudrate_cbb";
+            this.baudrate_cbb.Size = new System.Drawing.Size(121, 20);
+            this.baudrate_cbb.TabIndex = 4;
             // 
-            // comboBox2
+            // filePathBtn
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(304, 71);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 20);
-            this.comboBox2.TabIndex = 4;
+            this.filePathBtn.Location = new System.Drawing.Point(496, 167);
+            this.filePathBtn.Name = "filePathBtn";
+            this.filePathBtn.Size = new System.Drawing.Size(75, 23);
+            this.filePathBtn.TabIndex = 5;
+            this.filePathBtn.Text = "加载文件";
+            this.filePathBtn.UseVisualStyleBackColor = true;
+            this.filePathBtn.Click += new System.EventHandler(this.filePathBtn_Click);
             // 
-            // 加载文件
+            // addressOffsetLbl
             // 
-            this.加载文件.Location = new System.Drawing.Point(522, 192);
-            this.加载文件.Name = "加载文件";
-            this.加载文件.Size = new System.Drawing.Size(75, 23);
-            this.加载文件.TabIndex = 5;
-            this.加载文件.Text = "加载文件";
-            this.加载文件.UseVisualStyleBackColor = true;
+            this.addressOffsetLbl.AutoSize = true;
+            this.addressOffsetLbl.Location = new System.Drawing.Point(24, 245);
+            this.addressOffsetLbl.Name = "addressOffsetLbl";
+            this.addressOffsetLbl.Size = new System.Drawing.Size(65, 12);
+            this.addressOffsetLbl.TabIndex = 9;
+            this.addressOffsetLbl.Text = "起始地址：";
             // 
-            // 波特率
+            // fileSizeLbl
             // 
-            this.波特率.AutoSize = true;
-            this.波特率.Location = new System.Drawing.Point(257, 75);
-            this.波特率.Name = "波特率";
-            this.波特率.Size = new System.Drawing.Size(41, 12);
-            this.波特率.TabIndex = 6;
-            this.波特率.Text = "波特率";
+            this.fileSizeLbl.AutoSize = true;
+            this.fileSizeLbl.Location = new System.Drawing.Point(231, 244);
+            this.fileSizeLbl.Name = "fileSizeLbl";
+            this.fileSizeLbl.Size = new System.Drawing.Size(65, 12);
+            this.fileSizeLbl.TabIndex = 10;
+            this.fileSizeLbl.Text = "文件长度：";
             // 
-            // 升级操作
+            // addressOffsetBox
             // 
-            this.升级操作.AutoSize = true;
-            this.升级操作.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.升级操作.Location = new System.Drawing.Point(34, 163);
-            this.升级操作.Name = "升级操作";
-            this.升级操作.Size = new System.Drawing.Size(67, 14);
-            this.升级操作.TabIndex = 8;
-            this.升级操作.Text = "升级操作";
+            this.addressOffsetBox.Location = new System.Drawing.Point(95, 241);
+            this.addressOffsetBox.Name = "addressOffsetBox";
+            this.addressOffsetBox.ReadOnly = true;
+            this.addressOffsetBox.Size = new System.Drawing.Size(100, 21);
+            this.addressOffsetBox.TabIndex = 12;
             // 
-            // 起始地址
+            // fileSizeBox
             // 
-            this.起始地址.AutoSize = true;
-            this.起始地址.Location = new System.Drawing.Point(36, 270);
-            this.起始地址.Name = "起始地址";
-            this.起始地址.Size = new System.Drawing.Size(65, 12);
-            this.起始地址.TabIndex = 9;
-            this.起始地址.Text = "起始地址：";
+            this.fileSizeBox.Location = new System.Drawing.Point(299, 241);
+            this.fileSizeBox.Name = "fileSizeBox";
+            this.fileSizeBox.ReadOnly = true;
+            this.fileSizeBox.Size = new System.Drawing.Size(100, 21);
+            this.fileSizeBox.TabIndex = 12;
             // 
-            // 文件长度
+            // updateBtn
             // 
-            this.文件长度.AutoSize = true;
-            this.文件长度.Location = new System.Drawing.Point(257, 269);
-            this.文件长度.Name = "文件长度";
-            this.文件长度.Size = new System.Drawing.Size(65, 12);
-            this.文件长度.TabIndex = 10;
-            this.文件长度.Text = "文件长度：";
+            this.updateBtn.Enabled = false;
+            this.updateBtn.Location = new System.Drawing.Point(427, 117);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(75, 23);
+            this.updateBtn.TabIndex = 13;
+            this.updateBtn.Text = "固件升级";
+            this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
-            // textBox1
+            // filePathBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(107, 266);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 12;
+            this.filePathBox.Location = new System.Drawing.Point(10, 45);
+            this.filePathBox.Name = "filePathBox";
+            this.filePathBox.ReadOnly = true;
+            this.filePathBox.Size = new System.Drawing.Size(447, 21);
+            this.filePathBox.TabIndex = 14;
             // 
-            // textBox2
+            // LogBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(325, 266);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
-            this.textBox2.TabIndex = 12;
+            this.LogBox.Location = new System.Drawing.Point(12, 290);
+            this.LogBox.Name = "LogBox";
+            this.LogBox.Size = new System.Drawing.Size(568, 126);
+            this.LogBox.TabIndex = 15;
+            this.LogBox.Text = "";
             // 
-            // 固件升级
+            // groupBox1
             // 
-            this.固件升级.Location = new System.Drawing.Point(522, 270);
-            this.固件升级.Name = "固件升级";
-            this.固件升级.Size = new System.Drawing.Size(75, 23);
-            this.固件升级.TabIndex = 13;
-            this.固件升级.Text = "固件升级";
-            this.固件升级.UseVisualStyleBackColor = true;
+            this.groupBox1.Controls.Add(this.refreshCom_Btn);
+            this.groupBox1.Controls.Add(this.baudrateLbl);
+            this.groupBox1.Controls.Add(this.open_btn);
+            this.groupBox1.Controls.Add(this.baudrate_cbb);
+            this.groupBox1.Location = new System.Drawing.Point(12, 17);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(568, 100);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "串口配置";
             // 
-            // textBox3
+            // refreshCom_Btn
             // 
-            this.textBox3.Location = new System.Drawing.Point(38, 192);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(447, 21);
-            this.textBox3.TabIndex = 14;
+            this.refreshCom_Btn.Location = new System.Drawing.Point(484, 47);
+            this.refreshCom_Btn.Name = "refreshCom_Btn";
+            this.refreshCom_Btn.Size = new System.Drawing.Size(75, 23);
+            this.refreshCom_Btn.TabIndex = 1;
+            this.refreshCom_Btn.Text = "刷新";
+            this.refreshCom_Btn.UseVisualStyleBackColor = true;
+            this.refreshCom_Btn.Click += new System.EventHandler(this.refreshCom_Btn_Click);
             // 
-            // richTextBox1
+            // baudrateLbl
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(38, 315);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(559, 123);
-            this.richTextBox1.TabIndex = 15;
-            this.richTextBox1.Text = "";
+            this.baudrateLbl.AutoSize = true;
+            this.baudrateLbl.Location = new System.Drawing.Point(198, 53);
+            this.baudrateLbl.Name = "baudrateLbl";
+            this.baudrateLbl.Size = new System.Drawing.Size(41, 12);
+            this.baudrateLbl.TabIndex = 0;
+            this.baudrateLbl.Text = "波特率";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.updateBtn);
+            this.groupBox2.Controls.Add(this.filePathBox);
+            this.groupBox2.Location = new System.Drawing.Point(12, 124);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(568, 160);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "串口升级";
+            // 
+            // serialPort1
+            // 
+            this.serialPort1.BaudRate = 115200;
+            // 
+            // serialPort2
+            // 
+            this.serialPort2.PortName = "COM2";
+            // 
+            // serialPort3
+            // 
+            this.serialPort3.PortName = "COM3";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.固件升级);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.文件长度);
-            this.Controls.Add(this.起始地址);
-            this.Controls.Add(this.升级操作);
-            this.Controls.Add(this.波特率);
-            this.Controls.Add(this.加载文件);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.串口配置);
-            this.Controls.Add(this.串口号);
-            this.Controls.Add(this.打开串口);
+            this.ClientSize = new System.Drawing.Size(588, 420);
+            this.Controls.Add(this.fileSizeBox);
+            this.Controls.Add(this.fileSizeLbl);
+            this.Controls.Add(this.addressOffsetBox);
+            this.Controls.Add(this.addressOffsetLbl);
+            this.Controls.Add(this.filePathBtn);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.serial_port_lbl);
+            this.Controls.Add(this.serial_port_cbb);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.LogBox);
+            this.Controls.Add(this.baudrate_lbl);
             this.Name = "Form1";
             this.Text = "RDB升级工具";
+            this.Load += new System.EventHandler(this.ComDemo_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,21 +246,26 @@
 
         #endregion
 
-        private System.Windows.Forms.Button 打开串口;
-        private System.Windows.Forms.Label 串口号;
-        private System.Windows.Forms.Label 串口配置;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button 加载文件;
-        private System.Windows.Forms.Label 波特率;
-        private System.Windows.Forms.Label 升级操作;
-        private System.Windows.Forms.Label 起始地址;
-        private System.Windows.Forms.Label 文件长度;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button 固件升级;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button open_btn;
+        private System.Windows.Forms.Label serial_port_lbl;
+        private System.Windows.Forms.ComboBox serial_port_cbb;
+        private System.Windows.Forms.ComboBox baudrate_cbb;
+        private System.Windows.Forms.Button filePathBtn;
+        private System.Windows.Forms.Label baudrate_lbl;
+        private System.Windows.Forms.Label addressOffsetLbl;
+        private System.Windows.Forms.Label fileSizeLbl;
+        private System.Windows.Forms.TextBox addressOffsetBox;
+        private System.Windows.Forms.TextBox fileSizeBox;
+        private System.Windows.Forms.Button updateBtn;
+        private System.Windows.Forms.TextBox filePathBox;
+        private System.Windows.Forms.RichTextBox LogBox;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label baudrateLbl;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.IO.Ports.SerialPort serialPort1;
+        private System.IO.Ports.SerialPort serialPort2;
+        private System.IO.Ports.SerialPort serialPort3;
+        private System.Windows.Forms.Button refreshCom_Btn;
     }
 }
 

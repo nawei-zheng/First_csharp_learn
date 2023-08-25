@@ -89,4 +89,5 @@ public delegate void BoilerLogHandler(string status);
 // 基于上面的委托定义事件
 public event BoilerLogHandler BoilerEventLog;
 事件生成的时候会调用委托  、（事件handel就是委托名，那么等于事件是委托类型？）
-				
+
+10. +=：这是事件订阅操作符，用于将一个委托方法添加到事件的订阅列表中。				
